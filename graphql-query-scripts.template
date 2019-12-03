@@ -1,0 +1,46 @@
+mutation {
+  createBook(input: {
+    id: 5
+    name: "Some name",
+    genre: "Some genre",
+    author: {
+      id: 3,
+      name: "Some name",
+      age: 1
+    }
+  }) {
+    id
+    name
+    genre
+    author{
+      id
+      name
+      age
+    }
+  }
+}
+
+{
+  getAuthors {
+    id
+    name
+    age
+    books {
+      id 
+      name
+    }
+  }
+}
+
+{
+  getBooks {
+    id
+    name
+    genre
+    author {
+      id
+      name
+      age
+    }
+  }
+}
